@@ -1,0 +1,13 @@
+[user]
+	name = Jordan Focht
+	email = jfocht@gmail.com 
+[core]
+	autocrlf = input
+[color]
+	branch = true
+	diff = auto
+	status = true
+[alias] 
+	lg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit 
+	ss = status -s
+	co = checkout

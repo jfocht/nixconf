@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/jordan/src/edis_maroon_code/modules/web/src/main/scala/code/snippet'
+let g:netrw_dirhist_2='/home/jordan/src/edis_maroon_code/modules/web/src/main/scala/code'
+let g:netrw_dirhist_3='/home/jordan/src/edis_maroon_code/modules/web/src/main/scala/code/model'
+let g:netrw_dirhist_4='/home/jordan/src/edis_maroon_code/modules/web/src/main/webapp/templates-hidden'
