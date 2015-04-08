@@ -1,8 +1,9 @@
 [user]
 	name = Jordan Focht
-	email = jfocht@gmail.com 
+	email = jfocht@gmail.com
 [core]
 	autocrlf = input
+	excludesfile = /Users/jfocht/.gitignore_global
 [color]
 	branch = true
 	diff = auto
@@ -11,3 +12,14 @@
 	lg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit 
 	ss = status -s
 	co = checkout
+[push]
+	default = simple
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f

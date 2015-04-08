@@ -1,12 +1,40 @@
 filetype off
-call pathogen#infect()
+set nocompatible
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tomtom/tlib_vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'rstacruz/sparkup'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'moll/vim-node'
+Plugin 'pangloss/vim-javascript'
+Plugin 'tpope/vim-surround'
+Plugin 'wincent/command-t'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-repeat'
+Plugin 'Keithbsmiley/swift.vim'
+Plugin 'Raimondi/delimitMate'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'fatih/vim-go'
+Plugin 'nvie/vim-rst-tables'
+Plugin 'bling/vim-airline'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+Plugin 'Lokaltog/vim-easymotion'
+call vundle#end()
+
+
 filetype plugin indent on
 
+set t_Co=256
 set modelines=0
 set undodir=~/.vim/undodir
 set undofile
 
-set nocompatible
 set wildmode=longest,list
 set wildmenu
 
@@ -55,16 +83,13 @@ au FocusLost * :wa
 " auto-remove whitespace
 " autocmd BufWritePre * :%s/\s\+$//e
 
-colorscheme darkblue
+colorscheme solarized
+set background=dark
 
-nnoremap ; "
 noremap <leader>a :Ack
 nnoremap <leader>w :s/\s\+$//g<cr>:let @/=''<CR>
 nnoremap <leader>W :%s/\s\+$//g<cr>:let @/=''<CR>
 nnoremap <leader>f :NERDTree<CR>
 
-" Eclim Java mappings
-" TODO -- make these mappings context aware
-" nnoremap <silent> <buffer> <leader>i :JavaImport<cr>
-" nnoremap <silent> <buffer> <leader>d :JavaDocSearch -x declarations<cr>
-" nnoremap <silent> <buffer> <cr> :JavaSearchContext<cr>
+" let g:syntastic_check_on_open=1
+let g:airline_theme = 'solarized'

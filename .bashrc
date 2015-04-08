@@ -87,7 +87,7 @@ alias l='ls -CF'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Add an alias for ack-grep
-alias g='ack-grep'
+alias g='ack'
 
 # Aliases for parent directories
 alias back='cd $OLDPWD'
@@ -116,15 +116,15 @@ fi
 export 'CASSANDRA_HOME=/home/jordan/lib/apache-cassandra-0.7.10'
 
 # Android development mode
-ANDROID_HOME=/home/jordan/lib/android-sdk-linux
+ANDROID_HOME='/Users/jfocht/adt-bundle-mac-x86_64-20131030/sdk/'
 
 # Add syntax highlighting to less
-export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh '%s'"
-export LESS=' -R '
+# export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh '%s'"
+# export LESS=' -R '
 
 export EMACS_HOME=/home/jordan
 export PROMPT_COMMAND='PS1="\[\033[0;33m\][\!]\`if [[ \$? = "0" ]]; then echo "\\[\\033[32m\\]"; else echo "\\[\\033[31m\\]"; fi\`[\u.\h: \`if [[ `pwd|wc -c|tr -d " "` > 18 ]]; then echo "\\W"; else echo "\\w"; fi\`]\$\[\033[0m\] "; echo -ne "\033]0;`hostname -s`:`pwd`\007"'
-export JAVA_HOME=/home/jordan/lib/jdk1.6.0_30
+export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
 export PATH=$PATH:$JAVA_HOME/bin
 export PATH=$PATH:/home/jordan/typesafe-stack/bin
 export PATH=$PATH:/home/jordan/typesafe-stack
@@ -132,5 +132,18 @@ export PATH=$PATH:~/bin
 export PATH=$PATH:~/$CASSANDRA_HOME/bin
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
+export CLOJURESCRIPT_HOME=/Users/jfocht/src/clojurescript
 
 export EDITOR=vim
+
+##
+# Your previous /Users/jfocht/.bash_profile file was backed up as /Users/jfocht/.bash_profile.macports-saved_2014-02-19_at_09:31:56
+##
+
+# MacPorts Installer addition on 2014-02-19_at_09:31:56: adding an appropriate PATH variable for use with MacPorts.
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+export NDK_HOST_AWK=gawk
+export PATH=/usr/local/git/bin/:$PATH
