@@ -3,7 +3,6 @@ set nocompatible
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'tomtom/tlib_vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'scrooloose/nerdcommenter'
@@ -25,6 +24,10 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Plugin 'Lokaltog/vim-easymotion'
+Plugin 'vim-scripts/paredit.vim'
+Plugin 'tpope/vim-fireplace'
+Plugin 'guns/vim-clojure-static'
+Plugin 'tpope/vim-leiningen'
 call vundle#end()
 
 
