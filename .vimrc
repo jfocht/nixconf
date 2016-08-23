@@ -1,15 +1,18 @@
 filetype off
 set nocompatible
+set shiftwidth=4
+set softtabstop=4
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+Plugin 'othree/yajs.vim'
 Plugin 'tomtom/tlib_vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'rstacruz/sparkup'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'moll/vim-node'
-Plugin 'pangloss/vim-javascript'
+" Plugin 'pangloss/vim-javascript'
 Plugin 'tpope/vim-surround'
 Plugin 'wincent/command-t'
 Plugin 'tpope/vim-fugitive'
@@ -23,13 +26,12 @@ Plugin 'bling/vim-airline'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
-Plugin 'Lokaltog/vim-easymotion'
 Plugin 'vim-scripts/paredit.vim'
 Plugin 'tpope/vim-fireplace'
 Plugin 'guns/vim-clojure-static'
 Plugin 'tpope/vim-leiningen'
+Plugin 'Lokaltog/vim-easymotion'
 call vundle#end()
-
 
 filetype plugin indent on
 
@@ -45,8 +47,6 @@ syn on
 set backspace=2
 set expandtab
 set tabstop=4
-set shiftwidth=4
-set softtabstop=4
 set foldmethod=marker
 set ruler
 set fileformat=unix
